@@ -23,55 +23,69 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Expand training page to plain HTML
+
+      - name: Build verified plain training HTML
         shell: bash
         run: |
+          set -euxo pipefail
           python - <<'PY'
           from pathlib import Path
-          import re, base64, gzip
-          p = Path('xingyu-hr-training/index.html')
-          s = p.read_text('utf-8')
-          m = re.search(r"const b='([^']+)'", s)
-          if not m:
-              print('No compressed wrapper detected; keeping current HTML.')
-          else:
-              payload = m.group(1)
-              payload += '=' * (-len(payload) % 4)
-              html = gzip.decompress(base64.b64decode(payload)).decode('utf-8')
-              p.write_text(html, encoding='utf-8')
-              print(f'Expanded plain HTML: {len(html)} chars')
+          import base64, hashlib
+
+          src = Path('.github/pages-src')
+          payload = ''.join((src / f'xingyu.part{i}.b64').read_text('utf-8').strip() for i in range(1, 7))
+          html = base64.b64decode(payload, validate=True)
+          digest = hashlib.sha256(html).hexdigest()
+          expected = 'ad2d25e7832a5d41796468ecd34b30a39b2522f0fb0f9ba1704a50ee56bbd62c'
+          print('decoded_bytes=', len(html))
+          print('sha256=', digest)
+          if digest != expected:
+              raise SystemExit(f'SHA-256 mismatch: expected {expected}, got {digest}')
+
+          text = html.decode('utf-8')
+          if '从“校招解约”到治理危机' not in text:
+              raise SystemExit('Expected training-page marker not found')
+          if 'DecompressionStream' in text:
+              raise SystemExit('Unexpected browser decompression wrapper detected')
+
+          out = Path('xingyu-hr-training/index.html')
+          out.parent.mkdir(parents=True, exist_ok=True)
+          out.write_bytes(html)
+          print('Pure HTML rebuilt and verified:', out)
           PY
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
           enablement: true
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
           path: .
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
       - name: Verify published training page
         shell: bash
         run: |
           set -euxo pipefail
           URL="https://engty.github.io/Public/xingyu-hr-training/"
-          for i in 1 2 3 4 5 6; do
+          for i in 1 2 3 4 5 6 7 8 9 10; do
             CODE=$(curl -L -sS -o /tmp/page.html -w "%{http_code}" "$URL" || true)
             echo "attempt=$i http_status=$CODE"
             if [ "$CODE" = "200" ]; then
               grep -o '<title>[^<]*</title>' /tmp/page.html | head -1 || true
-              if grep -q 'DecompressionStream' /tmp/page.html; then
-                echo 'ERROR: compressed browser wrapper is still deployed'
-                exit 1
-              fi
-              if grep -q '从“校招解约”到治理危机' /tmp/page.html; then
-                echo 'Verified: plain training HTML is live'
+              ONLINE_SHA=$(sha256sum /tmp/page.html | awk '{print $1}')
+              echo "online_sha256=$ONLINE_SHA"
+              if [ "$ONLINE_SHA" = "ad2d25e7832a5d41796468ecd34b30a39b2522f0fb0f9ba1704a50ee56bbd62c" ]; then
+                echo 'Verified: exact plain HTML is live'
                 exit 0
               fi
-              echo 'HTTP 200 but expected training content not found'
             fi
-            sleep 5
+            sleep 3
           done
+          echo 'Published page did not match the verified plain HTML'
           exit 1
