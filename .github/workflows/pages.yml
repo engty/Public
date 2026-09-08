@@ -34,3 +34,20 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Verify published training page
+        shell: bash
+        run: |
+          set -euxo pipefail
+          URL="https://engty.github.io/Public/xingyu-hr-training/"
+          for i in 1 2 3 4 5 6; do
+            CODE=$(curl -L -sS -o /tmp/page.html -w "%{http_code}" "$URL" || true)
+            echo "attempt=$i http_status=$CODE"
+            if [ "$CODE" = "200" ]; then
+              grep -o '<title>[^<]*</title>' /tmp/page.html | head -1 || true
+              head -c 200 /tmp/page.html || true
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "Published page did not return HTTP 200"
+          exit 1
