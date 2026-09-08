@@ -23,6 +23,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Expand training page to plain HTML
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re, base64, gzip
+          p = Path('xingyu-hr-training/index.html')
+          s = p.read_text('utf-8')
+          m = re.search(r"const b='([^']+)'", s)
+          if not m:
+              print('No compressed wrapper detected; keeping current HTML.')
+          else:
+              html = gzip.decompress(base64.b64decode(m.group(1))).decode('utf-8')
+              p.write_text(html, encoding='utf-8')
+              print(f'Expanded plain HTML: {len(html)} chars')
+          PY
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
@@ -44,10 +60,16 @@ jobs:
             echo "attempt=$i http_status=$CODE"
             if [ "$CODE" = "200" ]; then
               grep -o '<title>[^<]*</title>' /tmp/page.html | head -1 || true
-              head -c 200 /tmp/page.html || true
-              exit 0
+              if grep -q 'DecompressionStream' /tmp/page.html; then
+                echo 'ERROR: compressed browser wrapper is still deployed'
+                exit 1
+              fi
+              if grep -q '从“校招解约”到治理危机' /tmp/page.html; then
+                echo 'Verified: plain training HTML is live'
+                exit 0
+              fi
+              echo 'HTTP 200 but expected training content not found'
             fi
             sleep 5
           done
-          echo "Published page did not return HTTP 200"
           exit 1
