@@ -35,7 +35,9 @@ jobs:
           if not m:
               print('No compressed wrapper detected; keeping current HTML.')
           else:
-              html = gzip.decompress(base64.b64decode(m.group(1))).decode('utf-8')
+              payload = m.group(1)
+              payload += '=' * (-len(payload) % 4)
+              html = gzip.decompress(base64.b64decode(payload)).decode('utf-8')
               p.write_text(html, encoding='utf-8')
               print(f'Expanded plain HTML: {len(html)} chars')
           PY
