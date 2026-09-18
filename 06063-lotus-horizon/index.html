@@ -129,6 +129,16 @@ li{margin-top:6px}
 .chartbox svg{width:100%;height:auto;display:block}
 .chartcap{font-size:12.5px;color:var(--muted);margin-top:8px}
 
+/* hooks & open loops */
+.hook{margin:30px 0 4px;padding:15px 20px;border-left:4px solid var(--gold);background:linear-gradient(90deg,#FFF9E8,#FFFFFF);border-radius:0 12px 12px 0;font-size:15px;color:#5A4A1C}
+.hook b{color:var(--navy)}
+.hook a{font-weight:700}
+.qlist{margin:14px 0 0 0;list-style:none}
+.qlist li{position:relative;padding:9px 0 9px 46px;border-top:1px dashed #E7DFC4;font-size:15.5px}
+.qlist li:first-child{border-top:none}
+.qlist li b{position:absolute;left:0;top:9px;font-family:ui-monospace,Menlo,monospace;color:var(--blue);font-weight:800}
+.qlist li span{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+
 /* probability bars */
 .pbar{height:11px;background:#EAF1FD;border-radius:8px;overflow:hidden;margin:8px 0 2px}
 .pbar i{display:block;height:100%;border-radius:8px;background:linear-gradient(90deg,#1B6EF3,#0E9F6E)}
@@ -192,9 +202,28 @@ li{margin-top:6px}
   </div>
 </header>
 
+<section class="openloops" style="padding:36px 0 4px">
+  <div class="wrap">
+    <div class="card gold">
+      <h3><span class="dot"></span>本文的七道悬念：每一道都会给出证据与答案</h3>
+      <p>这不是一篇新闻摘要，而是一份把公开信息拆到最小的调查笔记。我们先把问题立在这里——带着问题往下读，比直接看结论有意思得多。</p>
+      <ol class="qlist">
+        <li><b>Q1</b> 为什么 74.75% 的股权只卖 0.068 港元，而市价是 1.27 港元？<span>→ 第 01 章提出，第 07 章给出两个定价锚的完整解释</span></li>
+        <li><b>Q2</b> 卖方为什么肯这样卖？<span>→ 第 01 章列出三种解释，第 08 章说明为什么其中两条只能说「不知道」</span></li>
+        <li><b>Q3</b> 买方是谁？公告资料里怎么写他的？<span>→ 第 02 章</span></li>
+        <li><b>Q4</b> 钱从哪来？谁在为这笔交易放款？<span>→ 第 02 章的资金端与第 03 章的关系链图</span></li>
+        <li><b>Q5</b> 08305 是什么角色？为什么它先暴涨 219%？<span>→ 第 03 章剧本 + 第 05 章行情 + 第 06 章概念</span></li>
+        <li><b>Q6</b> 08305 会不会成为「弃子」？概率多大？<span>→ 第 06 章（含概率刻度与敏感性分析）</span></li>
+        <li><b>Q7</b> 接下来该盯什么？<span>→ 第 09 章观察清单（附 9 月 29 日这个确定性窗口）</span></li>
+      </ol>
+      <p class="note">⏱ <b>只有 3 分钟？</b>直接看：第 04 章的股价图、第 05 章的逐日数据表、第 06 章的概率刻度，以及第 09 章的悬念兑现表。</p>
+    </div>
+  </div>
+</section>
+
 <nav class="toc" id="toc">
   <div class="wrap">
-    <a href="#s1">01 交易拆解</a><a href="#s2">02 公司底子</a><a href="#s3">03 人物档案</a><a href="#s4">04 关系链 · 08305 预习</a><a href="#s5">05 九日复盘</a><a href="#s6">06 双壳结构</a><a href="#s7">07 推演区</a><a href="#s8">08 反证与风险</a><a href="#s9">09 观察清单</a>
+    <a href="#s1">01 交易拆解</a><a href="#s2">02 人物档案</a><a href="#s3">03 08305 剧本</a><a href="#s4">04 标的速写</a><a href="#s5">05 九日复盘</a><a href="#s6">06 双壳结构</a><a href="#s7">07 推演区</a><a href="#s8">08 反证与风险</a><a href="#s9">09 悬念兑现</a>
   </div>
 </nav>
 
@@ -250,50 +279,13 @@ li{margin-top:6px}
       <blockquote>顺便说一个数字巧合：<b>74.75%</b> 这个比例精确得可爱。买下 74.75%，公众持股恰好剩下 25.25%——刚好悬在主板 25% 公众持股红线的上方一点点。再多买一点就要处理公众持股不足，再少买一点控制力就弱一分。而卖方留下的 500 万股（0.25%）还签了不可撤销承诺：<span class="hl">不接纳要约</span>。这意味着要约永远到不了 90% 的强制收购线，公司不会被顺手私有化——卖方保留了 0.25% 股权，也给出了一个明确信号：公司仍将继续保持上市地位。<b>用一个数字同时解决两件事，这是投行与律师的手艺，我们这种写稿的只负责鼓掌。</b></blockquote>
     </div>
   </div>
-</section>
+
+    <div class="hook">▸ 下一章 · <b>人物档案</b>：价格只是结果。真正决定后续走向的，是三个人——一个把公司送上主板的工程人、一个羊乳产业出身的买家、一个出借资金的执业会计师。 <a href="#s2">跳读 →</a></div>
+  </section>
 
 <section id="s2">
   <div class="wrap">
     <div class="kicker"><span class="no">02</span><span class="rule"></span></div>
-    <h2 class="serif">这家公司，到底值多少钱？</h2>
-    <p class="lede">智中国际，全名 Lotus Horizon Holdings Limited，2007 年在香港起家，2020 年 4 月 15 日上市，招股价 0.25 港元，首日早盘高开 100%。六年过去，股价最低跌到过 0.147，又在这一年涨回 1.4 上方。它干的活很实在，但它现在的市值，一点都不实在。</p>
-
-    <div class="grid3">
-      <div class="card" style="margin-top:22px">
-        <h3><span class="dot"></span>它是干什么的</h3>
-        <p>外墙工程及建筑金属饰面工程的<b>分包商</b>：定制系统设计、物料采购、制造加工、现场安装、幕墙/铝窗维修保养。商业物业、住宅、公共设施都做。</p>
-        <p>IPO 时宣传口径：23 个已中标项目，还收到机场三跑等投标邀请。办公室在沙田安耀街，全公司约 <b>50 人</b>。</p>
-      </div>
-      <div class="card" style="margin-top:22px">
-        <h3><span class="dot"></span>账本上的它</h3>
-        <p>FY2026（截至 2026-03-31）：收益 <b>2.26 亿</b>港元，同比 -13.03%；<b>净亏损 330.7 万</b>港元。</p>
-        <p>FY2025：收益 2.6 亿（+7.1%），纯利 319 万（-3.8%），每股盈利 0.16 港仙。原因：关键项目施工进度放缓 + 香港市场激烈竞争压薄毛利。</p>
-      </div>
-      <div class="card" style="margin-top:22px">
-        <h3><span class="dot"></span>市场眼中的它</h3>
-        <p>9 月 18 日收市 1.130 港元 × 20 亿股 = 市值约 <b>22.6 亿港元</b>（9 月 9 日复牌首日曾收 1.355，对应 27.1 亿港元）。</p>
-        <p>市净率约 <b>17.8 倍</b>，市销率约 <b>10 倍</b>，市盈率为负。一句话：<span class="hl">一家亏钱的小分包商，被市场按「平台公司」定价。</span></p>
-      </div>
-    </div>
-
-    <div class="chartbox">
-      <h3>06063 周收盘价：2025-04 → 2026-09-09（数据：Yahoo Finance）</h3>
-      <svg viewBox="0 0 900 310" role="img" aria-label="c6063">
-<defs><linearGradient id="g-c6063" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B6EF3" stop-opacity=".28"/><stop offset="1" stop-color="#1B6EF3" stop-opacity="0"/></linearGradient></defs>
-<line x1="52" y1="282.0" x2="886" y2="282.0" stroke="#E3E9F2" stroke-width="1"/><text x="46" y="286.0" text-anchor="end" font-size="11" fill="#8A94A6">0.16</text><line x1="52" y1="218.5" x2="886" y2="218.5" stroke="#E3E9F2" stroke-width="1"/><text x="46" y="222.5" text-anchor="end" font-size="11" fill="#8A94A6">0.47</text><line x1="52" y1="155.0" x2="886" y2="155.0" stroke="#E3E9F2" stroke-width="1"/><text x="46" y="159.0" text-anchor="end" font-size="11" fill="#8A94A6">0.79</text><line x1="52" y1="91.5" x2="886" y2="91.5" stroke="#E3E9F2" stroke-width="1"/><text x="46" y="95.5" text-anchor="end" font-size="11" fill="#8A94A6">1.10</text><line x1="52" y1="28.0" x2="886" y2="28.0" stroke="#E3E9F2" stroke-width="1"/><text x="46" y="32.0" text-anchor="end" font-size="11" fill="#8A94A6">1.42</text>
-<polygon points="52.0,278.8 63.1,278.8 74.2,276.9 85.4,278.0 96.5,282.0 107.6,279.4 118.7,278.0 129.8,278.0 141.0,278.0 152.1,278.4 163.2,278.4 174.3,278.4 185.4,278.6 196.6,278.8 207.7,278.4 218.8,278.8 229.9,280.4 241.0,281.2 252.2,282.0 263.3,281.0 274.4,282.0 285.5,280.8 296.6,274.3 307.8,278.0 318.9,276.3 330.0,276.3 341.1,275.1 352.2,276.7 363.4,272.1 374.5,270.9 385.6,270.5 396.7,275.7 407.8,274.9 419.0,271.3 430.1,274.3 441.2,274.3 452.3,274.3 463.4,274.3 474.6,274.9 485.7,269.2 496.8,272.9 507.9,272.1 519.0,268.2 530.2,246.6 541.3,229.4 552.4,222.3 563.5,224.3 574.6,223.3 585.8,232.4 596.9,182.8 608.0,205.1 619.1,230.4 630.2,227.4 641.4,224.3 652.5,215.2 663.6,223.3 674.7,222.3 685.8,209.1 697.0,156.5 708.1,199.0 719.2,170.7 730.3,188.9 741.4,190.9 752.6,180.8 763.7,156.5 774.8,142.4 785.9,148.4 797.0,128.2 808.2,93.8 819.3,28.0 830.4,69.5 841.5,83.7 852.6,129.2 863.8,57.3 874.9,57.3 886.0,40.1 886.0,282 52,282" fill="url(#g-c6063)"/>
-<polyline points="52.0,278.8 63.1,278.8 74.2,276.9 85.4,278.0 96.5,282.0 107.6,279.4 118.7,278.0 129.8,278.0 141.0,278.0 152.1,278.4 163.2,278.4 174.3,278.4 185.4,278.6 196.6,278.8 207.7,278.4 218.8,278.8 229.9,280.4 241.0,281.2 252.2,282.0 263.3,281.0 274.4,282.0 285.5,280.8 296.6,274.3 307.8,278.0 318.9,276.3 330.0,276.3 341.1,275.1 352.2,276.7 363.4,272.1 374.5,270.9 385.6,270.5 396.7,275.7 407.8,274.9 419.0,271.3 430.1,274.3 441.2,274.3 452.3,274.3 463.4,274.3 474.6,274.9 485.7,269.2 496.8,272.9 507.9,272.1 519.0,268.2 530.2,246.6 541.3,229.4 552.4,222.3 563.5,224.3 574.6,223.3 585.8,232.4 596.9,182.8 608.0,205.1 619.1,230.4 630.2,227.4 641.4,224.3 652.5,215.2 663.6,223.3 674.7,222.3 685.8,209.1 697.0,156.5 708.1,199.0 719.2,170.7 730.3,188.9 741.4,190.9 752.6,180.8 763.7,156.5 774.8,142.4 785.9,148.4 797.0,128.2 808.2,93.8 819.3,28.0 830.4,69.5 841.5,83.7 852.6,129.2 863.8,57.3 874.9,57.3 886.0,40.1" fill="none" stroke="#1B6EF3" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
-<circle cx="85.4" cy="282.0" r="4" fill="#8A94A6" stroke="#fff" stroke-width="2"/><text x="85.4" y="272" text-anchor="middle" font-size="11.5" font-weight="600" fill="#8A94A6">2025.05 谷底 0.16</text><circle cx="474.6" cy="246.6" r="4" fill="#0E9F6E" stroke="#fff" stroke-width="2"/><text x="474.6" y="236.6" text-anchor="middle" font-size="11.5" font-weight="600" fill="#0E9F6E">2026.02 放量启动</text><circle cx="774.8" cy="28.0" r="4" fill="#D94848" stroke="#fff" stroke-width="2"/><text x="774.8" y="18" text-anchor="middle" font-size="11.5" font-weight="600" fill="#D94848">2026.08 高点 1.415</text><circle cx="858.2" cy="57.3" r="4" fill="#B45309" stroke="#fff" stroke-width="2"/><text x="858.2" y="47.3" text-anchor="start" font-size="11.5" font-weight="600" fill="#B45309">9.3 停牌</text><circle cx="886.0" cy="40.1" r="4" fill="#1B6EF3" stroke="#fff" stroke-width="2"/><text x="886.0" y="30.1" text-anchor="end" font-size="11.5" font-weight="600" fill="#1B6EF3">9.9 复牌收 1.355（+6.7%）</text><text x="52.0" y="302" text-anchor="middle" font-size="10.5" fill="#8A94A6">2025-04</text><text x="174.3" y="302" text-anchor="middle" font-size="10.5" fill="#8A94A6">2025-06</text><text x="296.6" y="302" text-anchor="middle" font-size="10.5" fill="#8A94A6">2025-09</text><text x="419.0" y="302" text-anchor="middle" font-size="10.5" fill="#8A94A6">2025-11</text><text x="541.3" y="302" text-anchor="middle" font-size="10.5" fill="#8A94A6">2026-02</text><text x="663.6" y="302" text-anchor="middle" font-size="10.5" fill="#8A94A6">2026-04</text><text x="785.9" y="302" text-anchor="middle" font-size="10.5" fill="#8A94A6">2026-07</text></svg>
-      <p class="chartcap">注意 2026 年 2 月那一脚：0.20 附近直接启动，到 8 月初见 1.415（周线收盘价），半年约 7 倍。而联合公告 9 月 8 日才落地。股价领先公告整整一个夏天——这是「预期交易」的典型形态，也是监管事后最常回看的区间。而 9 月 9 日复牌当天，早盘一度下探 1.000（-21%），尾盘却收在全天高位附近的 1.355（+6.69%）——面对 0.068 的要约价，二级市场用真金白银投出了自己的票。</p>
-    </div>
-
-    <div class="warn">🕵️ 本节小结：用 1.02 亿现金换 22.6 亿市值平台的控制权，杠杆率约 22 倍。买的不只是外墙生意，是「上市地位 + 新故事的载体」。往下看人物，就知道故事大概会往哪个方向讲。</div>
-  </div>
-</section>
-
-<section id="s3">
-  <div class="wrap">
-    <div class="kicker"><span class="no">03</span><span class="rule"></span></div>
     <h2 class="serif">三个人物，三种画风</h2>
     <p class="lede">这笔交易里有五方角色：转让方、买方、资金方、持有 1% 的股东，以及市场上的旁观者。前三位，值得我们逐一认识。写人物是这份报告里最需要小心的部分——<b>我们只有公开资料，没有交情，所以只写文件里有的，不做评判、不加戏</b>。</p>
 
@@ -414,11 +406,13 @@ li{margin-top:6px}
       <p class="chartcap">一张图看懂：产业端（徐长城乳业系）在左，资金端（姚道华/盈高）在右，两个香港壳（08305、06063）是被连接的节点。注意虚线——所有「推断」我们都单独标注，不混进「事实」。</p>
     </div>
   </div>
-</section>
 
-<section id="s4">
+    <div class="hook">▸ 下一章 · <b>08305：另一只壳</b>：买家的名字早在一年多前就出现在另一只港股上——那只票，已经把这套动作演过一遍。 <a href="#s3">跳读 →</a></div>
+  </section>
+
+<section id="s3">
   <div class="wrap">
-    <div class="kicker"><span class="no">04</span><span class="rule"></span></div>
+    <div class="kicker"><span class="no">03</span><span class="rule"></span></div>
     <h2 class="serif">在 06063 之前：08305 已经走过一遍相似的路径</h2>
     <p class="lede">这是整份报告最值钱的一章。香港创业板公司<b>洢人壹方控股（08305）</b>——做维修保养工程的小承建商——过去两年的经历，几乎就是一份「平台改造」的完整样本。而这一系列动作的节奏，与 06063 这单高度相似：同一批人、同一套顺序，同样是乳业背景的高管进入董事会。</p>
 
@@ -543,7 +537,50 @@ li{margin-top:6px}
       <p class="chartcap">金色虚线是全文唯一的「猜测线」：乳业资产会不会进这两个壳？——公开文件一个字都没说。我们把它画出来，是因为市场的定价里，已经为这条线付了很大一笔钱。</p>
     </div>
   </div>
-</section>
+
+    <div class="hook">▸ 下一章 · <b>标的速写</b>：看完了剧本，回头看看这次的「货」本身：一家 50 人、年入 2.26 亿、正在亏钱的外墙分包商，凭什么值 22.6 亿？ <a href="#s4">跳读 →</a></div>
+  </section>
+
+<section id="s4">
+  <div class="wrap">
+    <div class="kicker"><span class="no">04</span><span class="rule"></span></div>
+    <h2 class="serif">现在来看这次的「货」：一家 50 人的公司，凭什么值 22.6 亿？</h2>
+    <p class="lede">智中国际，全名 Lotus Horizon Holdings Limited，2007 年在香港起家，2020 年 4 月 15 日上市，招股价 0.25 港元，首日早盘高开 100%。六年过去，股价最低跌到过 0.147，又在这一年涨回 1.4 上方。它干的活很实在，但它现在的市值，一点都不实在。</p>
+
+    <div class="grid3">
+      <div class="card" style="margin-top:22px">
+        <h3><span class="dot"></span>它是干什么的</h3>
+        <p>外墙工程及建筑金属饰面工程的<b>分包商</b>：定制系统设计、物料采购、制造加工、现场安装、幕墙/铝窗维修保养。商业物业、住宅、公共设施都做。</p>
+        <p>IPO 时宣传口径：23 个已中标项目，还收到机场三跑等投标邀请。办公室在沙田安耀街，全公司约 <b>50 人</b>。</p>
+      </div>
+      <div class="card" style="margin-top:22px">
+        <h3><span class="dot"></span>账本上的它</h3>
+        <p>FY2026（截至 2026-03-31）：收益 <b>2.26 亿</b>港元，同比 -13.03%；<b>净亏损 330.7 万</b>港元。</p>
+        <p>FY2025：收益 2.6 亿（+7.1%），纯利 319 万（-3.8%），每股盈利 0.16 港仙。原因：关键项目施工进度放缓 + 香港市场激烈竞争压薄毛利。</p>
+      </div>
+      <div class="card" style="margin-top:22px">
+        <h3><span class="dot"></span>市场眼中的它</h3>
+        <p>9 月 18 日收市 1.130 港元 × 20 亿股 = 市值约 <b>22.6 亿港元</b>（9 月 9 日复牌首日曾收 1.355，对应 27.1 亿港元）。</p>
+        <p>市净率约 <b>17.8 倍</b>，市销率约 <b>10 倍</b>，市盈率为负。一句话：<span class="hl">一家亏钱的小分包商，被市场按「平台公司」定价。</span></p>
+      </div>
+    </div>
+
+    <div class="chartbox">
+      <h3>06063 周收盘价：2025-04 → 2026-09-09（数据：Yahoo Finance）</h3>
+      <svg viewBox="0 0 900 310" role="img" aria-label="c6063">
+<defs><linearGradient id="g-c6063" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B6EF3" stop-opacity=".28"/><stop offset="1" stop-color="#1B6EF3" stop-opacity="0"/></linearGradient></defs>
+<line x1="52" y1="282.0" x2="886" y2="282.0" stroke="#E3E9F2" stroke-width="1"/><text x="46" y="286.0" text-anchor="end" font-size="11" fill="#8A94A6">0.16</text><line x1="52" y1="218.5" x2="886" y2="218.5" stroke="#E3E9F2" stroke-width="1"/><text x="46" y="222.5" text-anchor="end" font-size="11" fill="#8A94A6">0.47</text><line x1="52" y1="155.0" x2="886" y2="155.0" stroke="#E3E9F2" stroke-width="1"/><text x="46" y="159.0" text-anchor="end" font-size="11" fill="#8A94A6">0.79</text><line x1="52" y1="91.5" x2="886" y2="91.5" stroke="#E3E9F2" stroke-width="1"/><text x="46" y="95.5" text-anchor="end" font-size="11" fill="#8A94A6">1.10</text><line x1="52" y1="28.0" x2="886" y2="28.0" stroke="#E3E9F2" stroke-width="1"/><text x="46" y="32.0" text-anchor="end" font-size="11" fill="#8A94A6">1.42</text>
+<polygon points="52.0,278.8 63.1,278.8 74.2,276.9 85.4,278.0 96.5,282.0 107.6,279.4 118.7,278.0 129.8,278.0 141.0,278.0 152.1,278.4 163.2,278.4 174.3,278.4 185.4,278.6 196.6,278.8 207.7,278.4 218.8,278.8 229.9,280.4 241.0,281.2 252.2,282.0 263.3,281.0 274.4,282.0 285.5,280.8 296.6,274.3 307.8,278.0 318.9,276.3 330.0,276.3 341.1,275.1 352.2,276.7 363.4,272.1 374.5,270.9 385.6,270.5 396.7,275.7 407.8,274.9 419.0,271.3 430.1,274.3 441.2,274.3 452.3,274.3 463.4,274.3 474.6,274.9 485.7,269.2 496.8,272.9 507.9,272.1 519.0,268.2 530.2,246.6 541.3,229.4 552.4,222.3 563.5,224.3 574.6,223.3 585.8,232.4 596.9,182.8 608.0,205.1 619.1,230.4 630.2,227.4 641.4,224.3 652.5,215.2 663.6,223.3 674.7,222.3 685.8,209.1 697.0,156.5 708.1,199.0 719.2,170.7 730.3,188.9 741.4,190.9 752.6,180.8 763.7,156.5 774.8,142.4 785.9,148.4 797.0,128.2 808.2,93.8 819.3,28.0 830.4,69.5 841.5,83.7 852.6,129.2 863.8,57.3 874.9,57.3 886.0,40.1 886.0,282 52,282" fill="url(#g-c6063)"/>
+<polyline points="52.0,278.8 63.1,278.8 74.2,276.9 85.4,278.0 96.5,282.0 107.6,279.4 118.7,278.0 129.8,278.0 141.0,278.0 152.1,278.4 163.2,278.4 174.3,278.4 185.4,278.6 196.6,278.8 207.7,278.4 218.8,278.8 229.9,280.4 241.0,281.2 252.2,282.0 263.3,281.0 274.4,282.0 285.5,280.8 296.6,274.3 307.8,278.0 318.9,276.3 330.0,276.3 341.1,275.1 352.2,276.7 363.4,272.1 374.5,270.9 385.6,270.5 396.7,275.7 407.8,274.9 419.0,271.3 430.1,274.3 441.2,274.3 452.3,274.3 463.4,274.3 474.6,274.9 485.7,269.2 496.8,272.9 507.9,272.1 519.0,268.2 530.2,246.6 541.3,229.4 552.4,222.3 563.5,224.3 574.6,223.3 585.8,232.4 596.9,182.8 608.0,205.1 619.1,230.4 630.2,227.4 641.4,224.3 652.5,215.2 663.6,223.3 674.7,222.3 685.8,209.1 697.0,156.5 708.1,199.0 719.2,170.7 730.3,188.9 741.4,190.9 752.6,180.8 763.7,156.5 774.8,142.4 785.9,148.4 797.0,128.2 808.2,93.8 819.3,28.0 830.4,69.5 841.5,83.7 852.6,129.2 863.8,57.3 874.9,57.3 886.0,40.1" fill="none" stroke="#1B6EF3" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="85.4" cy="282.0" r="4" fill="#8A94A6" stroke="#fff" stroke-width="2"/><text x="85.4" y="272" text-anchor="middle" font-size="11.5" font-weight="600" fill="#8A94A6">2025.05 谷底 0.16</text><circle cx="474.6" cy="246.6" r="4" fill="#0E9F6E" stroke="#fff" stroke-width="2"/><text x="474.6" y="236.6" text-anchor="middle" font-size="11.5" font-weight="600" fill="#0E9F6E">2026.02 放量启动</text><circle cx="774.8" cy="28.0" r="4" fill="#D94848" stroke="#fff" stroke-width="2"/><text x="774.8" y="18" text-anchor="middle" font-size="11.5" font-weight="600" fill="#D94848">2026.08 高点 1.415</text><circle cx="858.2" cy="57.3" r="4" fill="#B45309" stroke="#fff" stroke-width="2"/><text x="858.2" y="47.3" text-anchor="start" font-size="11.5" font-weight="600" fill="#B45309">9.3 停牌</text><circle cx="886.0" cy="40.1" r="4" fill="#1B6EF3" stroke="#fff" stroke-width="2"/><text x="886.0" y="30.1" text-anchor="end" font-size="11.5" font-weight="600" fill="#1B6EF3">9.9 复牌收 1.355（+6.7%）</text><text x="52.0" y="302" text-anchor="middle" font-size="10.5" fill="#8A94A6">2025-04</text><text x="174.3" y="302" text-anchor="middle" font-size="10.5" fill="#8A94A6">2025-06</text><text x="296.6" y="302" text-anchor="middle" font-size="10.5" fill="#8A94A6">2025-09</text><text x="419.0" y="302" text-anchor="middle" font-size="10.5" fill="#8A94A6">2025-11</text><text x="541.3" y="302" text-anchor="middle" font-size="10.5" fill="#8A94A6">2026-02</text><text x="663.6" y="302" text-anchor="middle" font-size="10.5" fill="#8A94A6">2026-04</text><text x="785.9" y="302" text-anchor="middle" font-size="10.5" fill="#8A94A6">2026-07</text></svg>
+      <p class="chartcap">注意 2026 年 2 月那一脚：0.20 附近直接启动，到 8 月初见 1.415（周线收盘价），半年约 7 倍。而联合公告 9 月 8 日才落地。股价领先公告整整一个夏天——这是「预期交易」的典型形态，也是监管事后最常回看的区间。而 9 月 9 日复牌当天，早盘一度下探 1.000（-21%），尾盘却收在全天高位附近的 1.355（+6.69%）——面对 0.068 的要约价，二级市场用真金白银投出了自己的票。</p>
+    </div>
+
+    <div class="warn">🕵️ 本节小结：用 1.02 亿现金换 22.6 亿市值平台的控制权，杠杆率约 22 倍。买的不只是外墙生意，是「上市地位 + 新故事的载体」。而这只股票的价格，早在公告之前半年就已经启动——下一章我们把公告之后的九个交易日逐个摊开。</div>
+  </div>
+
+    <div class="hook">▸ 下一章 · <b>九日复盘</b>：这只股票的价格早在公告之前半年就启动了；而公告之后的九个交易日，才是真正的压力测试。 <a href="#s5">跳读 →</a></div>
+  </section>
 
 <section id="s5">
   <div class="wrap">
@@ -628,7 +665,9 @@ li{margin-top:6px}
       <p class="warn">🕵️ 三个必须写清楚的边界：① 29.00% 是一个精确卡在 30% 强制要约线之下的数字，与 06063 的 74.75%（公众持股刚好 25.25%）是同一种「数字工程」；② HelloBaby 的股东背景目前<b>没有公开穿透资料</b>；③ <b>我们没有任何证据表明 01536 与 06063、08305 之间存在资本、人员或业务关联</b>。把它写进来，是因为它是这张公开发布的关系网上可查的第三个节点——观察，而不是暗示。</p>
     </div>
   </div>
-</section>
+
+    <div class="hook">▸ 下一章 · <b>双壳结构</b>：九天的行情已经摊开。现在可以问那个最有张力的问题了——这两只票，到底是什么关系？ <a href="#s6">跳读 →</a></div>
+  </section>
 
 <section id="s6">
   <div class="wrap">
@@ -733,7 +772,9 @@ li{margin-top:6px}
       <p>所以我们的结论是：<b>短期内「弃子」概率偏低（15–25%），但这个概率与一个变量高度绑定——06063 能不能拿到资产。</b>资产落地，08305 是「前哨」；资产迟迟不落地，08305 就会变成「另一个需要向市场交代的故事」。<span class="hl">这大概就是双壳结构的宿命：它让整套布局有了两条腿，也让每条腿都必须自己走路。</span></p>
     </div>
   </div>
-</section>
+
+    <div class="hook">▸ 下一章 · <b>推演区</b>：如果剧本真是羊奶，数学长什么样？我们把最保守与最激进的两端都算一遍。 <a href="#s7">跳读 →</a></div>
+  </section>
 
 <section id="s7">
   <div class="wrap">
@@ -779,7 +820,9 @@ li{margin-top:6px}
       <p class="ok">🧯 合规提示：以上推演全部基于公开信息整理，<b>不代表存在任何未披露安排</b>。若读者接触到的任何「消息」与公开文件不符，请以交易所披露为准，并向专业顾问求证。</p>
     </div>
   </div>
-</section>
+
+    <div class="hook">▸ 下一章 · <b>反证室</b>：好故事都有另一半——这一章，我们自己给自己泼七盆冷水。 <a href="#s8">跳读 →</a></div>
+  </section>
 
 <section id="s8">
   <div class="wrap">
@@ -818,13 +861,15 @@ li{margin-top:6px}
       </div>
     </div>
   </div>
-</section>
+
+    <div class="hook">▸ 下一章 · <b>悬念兑现</b>：把开头立下的七道悬念一一结账，并给出未来三个月的观察清单。 <a href="#s9">跳读 →</a></div>
+  </section>
 
 <section id="s9">
   <div class="wrap">
     <div class="kicker"><span class="no">09</span><span class="rule"></span></div>
-    <h2 class="serif">收尾：把问题留成清单</h2>
-    <p class="lede">调查的意义不是给出结论，而是把「需要继续追问的问题」整理成一份清单。控制权换手只是第一页；后面的每一页，都要用公告来翻。<b>这份清单唯一的好处是：它不需要任何人相信我们</b>——每一条你都可以自己动手核对。</p>
+    <h2 class="serif">收尾：七道悬念，逐条结账</h2>
+    <p class="lede">读到这里的读者应该已经发现：这份报告真正想做的，不是给一个结论，而是把七道悬念逐一结账——哪些有公开证据、哪些只能承认「不知道」，以及接下来该盯什么。控制权换手只是第一页；后面的每一页，都要用公告来翻。<b>这份清单唯一的好处是：它不需要任何人相信我们</b>——每一条你都可以自己动手核对。</p>
 
     <div class="card">
       <h3><span class="dot"></span>最后核对清单</h3>
@@ -836,7 +881,22 @@ li{margin-top:6px}
       </div>
     </div>
 
-    <div class="card">
+        <div class="card gold">
+      <h3><span class="dot"></span>悬念兑现：开头那七道问题，答案在这里</h3>
+      <table>
+        <tr><th style="width:32%">问题</th><th>本文的答案（一句话版）</th></tr>
+        <tr><td><b>Q1</b> 为什么折让 94.65%？</td><td>因为存在两个定价锚：0.068 港元是相对每股净资产（约 0.063 港元）的壳价——其实还<b>溢价约 8%</b>；1.27 港元是二级市场对「新主人选项」的定价。两个价格都是真的，只是活在不同的世界里。</td></tr>
+        <tr><td><b>Q2</b> 卖方为什么肯这样卖？</td><td><b>公开文件没有说明</b>。本文给出三种常见解释（壳价与故事价分离、卖方流动性需求、其他安排），但只有第一种能由公开数据支撑；其余两条我们明确标注为「不知道」。</td></tr>
+        <tr><td><b>Q3</b> 买方是谁？</td><td>徐长城：55 岁、江苏博领科技股份有限公司创办人、2018.9–2025.4 任陕西圣唐乳业控股股东、08305 主要股东约 18.6%——公告所附要约人资料已把「港股买家」与「羊乳产业」连在一起。</td></tr>
+        <tr><td><b>Q4</b> 钱从哪来？</td><td>要约资金来自<b>盈高（High Surplus）根据融资协议提供的最高 3,500 万港元融资</b>，且盈高在 9 月 2 日同日就 74.75% 股份登记了担保权益——资金方不是「碰巧路过」，而是进入了交易的资金结构。</td></tr>
+        <tr><td><b>Q5</b> 08305 为什么先暴涨？</td><td>价格先行、公告为零：9/10–9/18 从 0.058 涨到 0.185（+219%），期间没有配售、注入、董事变更或与 06063 的正式交易；同时它的乳制品分销业务已贡献 3,000 万港元收入——<b>业务是真的，但涨幅远快于业务</b>。</td></tr>
+        <tr><td><b>Q6</b> 08305 会不会成为「弃子」？</td><td>六个「卖掉条件」中四条不成立、两条待观察，因此 12 个月内控制权被转让的主观概率为 <b>15–25%</b>；维持上市并继续作为乳业／渠道平台的概率为 <b>55–65%</b>。关键变量只有一个：06063 能不能拿到资产。</td></tr>
+        <tr><td><b>Q7</b> 接下来盯什么？</td><td><b>9 月 29 日前的综合要约文件</b>（第一份写明业务意向的官方文件）；其后依次是董事换血、拟更名、乳业相关业务公告、与博羚／圣唐体系的交易或合作，以及要约截止后的战略表态。</td></tr>
+      </table>
+      <p class="note">📌 七道问题里，<b>五道有公开证据支撑的答案，两道我们只能说「不知道」</b>——保留「不知道」，是因为把不确定当确定写出来，才是这类调查最不负责的做法。</p>
+    </div>
+
+<div class="card">
       <h3><span class="dot"></span>来源清单（公开资料）</h3>
       <ol class="src">
         <li>经济观察报《智中国际(06063)股价大幅震荡 新股东后续计划待披露》（2026-09-17）— <a href="http://www.eeo.com.cn/2026/0917/1039441.shtml">eeo.com.cn</a>（「两个定价锚在打架」：0.068 相对每股净资产约 0.063 港元溢价约 8%；1 港元上方对应市净率 15 倍以上）</li>
@@ -871,6 +931,8 @@ li{margin-top:6px}
     </div>
   </div>
 </section>
+
+
 
 <div class="footer">
   <div class="wrap">
